@@ -1,0 +1,56 @@
+{
+  "routes": [
+    {
+      "path": "/",
+      "title": "RecLora Home"
+    },
+    {
+      "path": "/index.html",
+      "title": "RecLora Home"
+    },
+    {
+      "path": "/rooms.html",
+      "title": "RecLora Rooms"
+    },
+    {
+      "path": "/download.html",
+      "title": "Download RecLora"
+    },
+    {
+      "path": "/news.html",
+      "title": "RecLora News"
+    },
+    {
+      "path": "/roadmap.html",
+      "title": "Development Roadmap"
+    },
+    {
+      "path": "/faq.html",
+      "title": "Frequently Asked Questions"
+    },
+    {
+      "path": "/team.html",
+      "title": "RecLora Team"
+    },
+    {
+      "path": "/contact.html",
+      "title": "Contact RecLora"
+    },
+    {
+      "path": "/appeals.html",
+      "title": "Submit an Appeal"
+    },
+    {
+      "path": "/rules.html",
+      "title": "Community Rules"
+    },
+    {
+      "path": "/fanart.html",
+      "title": "Fan Art"
+    },
+    {
+      "path": "/shoutouts.html",
+      "title": "Community Shoutouts"
+    }
+  ]
+}

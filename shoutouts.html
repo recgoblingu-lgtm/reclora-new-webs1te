@@ -1,0 +1,92 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RecLora Shoutouts</title>
+  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" data-reclora-preview-style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+  <div class="nav-logo">
+    <img src="IMG_7056.png" alt="RecLora Logo" class="logo-img">
+    <span>RecLora</span>
+  </div>
+  <!-- Hamburger -->
+  <button data-reclora-legacy-nav="true" class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+  <!-- IMPORTANT: id added -->
+  <ul class="nav-menu" id="navMenu">
+                <li><a href="rooms.html" class="nav-link">Rooms</a></li>
+    <li><a href="index.html" class="nav-link active">Home</a></li>
+    <li><a href="download.html" class="nav-link">Download</a></li>
+    <li><a href="news.html" class="nav-link">News</a></li>
+    <li><a href="roadmap.html" class="nav-link">Roadmap</a></li>
+    <li><a href="faq.html" class="nav-link">FAQ</a></li>
+    <li><a href="team.html" class="nav-link">Team</a></li>
+    <li><a href="contact.html" class="nav-link">Contact</a></li>
+    <li><a href="rules.html" class="nav-link">Rules</a></li>
+    <li><a href="fanart.html" class="nav-link">Fan Art</a></li>
+  </ul>
+</div>
+  </nav>
+  <!-- MAIN -->
+  <div class="container">
+<div class="card welcome-card">
+  <img src="IMG_7056.png" alt="Shoutout Banner" class="welcome-logo">
+  <h1>Shoutouts</h1>
+  <p>People, creators, and communities that support RecLora.</p>
+</div>
+<div class="features-section">
+  <h2>Featured Creators</h2>
+  <div class="features-grid">
+    <div class="card feature-card">
+      <img src="IMG_8300.webp" alt="User Logo" class="logo-img" style="margin-bottom:10px;">
+      <h3>Gaveers / GGs551</h3>
+      <p>Overall helps reclora thrive!</p>
+      <a href="#" class="btn btn-secondary">Visit</a>
+    </div>
+    <div class="card feature-card">
+      <img src="IMG_8299.jpeg" alt="User Logo" class="logo-img" style="margin-bottom:10px;">
+      <h3>RecQuiem</h3>
+      <p>RecQuiem Helps RL & zen is affiliated. </p>
+      <a href="#" class="btn btn-secondary">Check Out</a>
+    </div>
+    <div class="card feature-card">
+      <img src="IMG_8298.jpeg" alt="User Logo" class="logo-img" style="margin-bottom:10px;">
+      <h3>Friend / Dev</h3>
+      <p>Someone who helped build or inspired RecLora.</p>
+      <a href="#" class="btn btn-secondary">Profile</a>
+    </div>
+  </div>
+</div>
+<div class="card">
+  <h2 style="margin-bottom:10px;">Want to be featured?</h2>
+  <p style="color:#aaa; margin-bottom:15px;">
+    If you’ve contributed, supported, or created something cool, you can be added here.
+  </p>
+  <a href="contact.html" class="btn btn-primary">Contact</a>
+</div>
+  </div>
+  <footer class="footer">
+    <p>© 2026 RecLora. Built by Crimson.</p>
+    <p><a href="#">Discord</a> • <a href="#">GitHub</a></p>
+  </footer>
+  <!-- ✅ CORRECT SCRIPT (matches your CSS) -->
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const menu = document.getElementById('navMenu');
+    toggle.addEventListener('click', () => {
+      toggle.classList.toggle('open');
+      menu.classList.toggle('open');
+    });
+  </script>
+  <script src="js/site-shell.js"></script>
+</body>
+</html>

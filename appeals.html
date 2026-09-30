@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Submit an Appeal</title>
+<style>
+/* ---- site stylesheet (as provided) ---- */
+:root {
+    --color-black: #141414;
+    --color-dark-gray: #1C1C1C;
+    --color-white: #FFFFFF;
+    --color-accent: #3B82F6;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    line-height: 1.6;
+}
+.navbar {
+    background-color: var(--color-dark-gray);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #2A2A2A;
+}
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-white);
+    text-decoration: none;
+}
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+.nav-link {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.nav-link:hover, .nav-link.active {
+    color: var(--color-accent);
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+.card {
+    background-color: var(--color-dark-gray);
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid #2A2A2A;
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s;
+}
+.btn-primary {
+    background-color: var(--color-accent);
+    color: white;
+}
+.btn-primary:hover {
+    background-color: #2563EB;
+}
+.footer {
+    background-color: var(--color-dark-gray);
+    border-top: 1px solid #2A2A2A;
+    padding: 2rem;
+    text-align: center;
+    color: #888;
+    margin-top: 4rem;
+}
+.footer a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+}
+
+/* ---- appeal page, built on top of the above ---- */
+.appeal-container {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.page-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-header p {
+    color: #aaa;
+}
+
+#status-msg {
+    text-align: center;
+    font-weight: 600;
+    min-height: 1.2em;
+    margin-bottom: 1rem;
+}
+#status-msg.success { color: #4ADE80; }
+#status-msg.error { color: #F87171; }
+
+.field {
+    margin-bottom: 1.5rem;
+}
+
+.field:last-of-type {
+    margin-bottom: 2rem;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-white);
+}
+
+label .req { color: var(--color-accent); }
+label .opt { color: #888; font-weight: 400; }
+
+input, textarea {
+    width: 100%;
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--color-white);
+    background-color: var(--color-black);
+    border: 1px solid #2A2A2A;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #666;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--color-accent);
+}
+
+input:focus-visible, textarea:focus-visible, button:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+.btn-primary {
+    width: 100%;
+    font-size: 1rem;
+}
+
+.btn-primary:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: var(--color-accent);
+}
+
+.form-footnote {
+    text-align: center;
+    color: #888;
+    font-size: 0.85rem;
+    margin-top: 1.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+}
+</style>
+</head>
+<body>
+<nav class="navbar"><div class="nav-container"><a href="index.html" class="nav-logo"><img src="IMG_7056.png" alt="RecLora Logo" class="logo-img"><span>RecLora</span></a><button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button><ul class="nav-menu"><li><a href="index.html" class="nav-link">Home</a></li><li><a href="download.html" class="nav-link">Download</a></li><li><a href="rooms.html" class="nav-link">Rooms</a></li><li><a href="faq.html" class="nav-link">FAQ</a></li><li><a href="contact.html" class="nav-link">Contact</a></li></ul></div></nav>
+
+  <div class="appeal-container">
+    <div class="page-header">
+      <h1>Submit an appeal</h1>
+      <p>Tell us what happened and why the action should be reversed.</p>
+    </div>
+
+    <p id="status-msg"></p>
+
+    <form id="appeal-form" class="card">
+      <div class="field">
+        <label for="username">Discord username <span class="req">*</span></label>
+        <input type="text" id="username" name="username" required placeholder="e.g. john#1234 or @john">
+      </div>
+
+      <div class="field">
+        <label for="user-id">Discord user ID <span class="opt">optional</span></label>
+        <input type="text" id="user-id" name="user-id" placeholder="Right-click your profile → Copy User ID">
+      </div>
+
+      <div class="field">
+        <label for="reason">Why were you banned or muted, as you understand it? <span class="req">*</span></label>
+        <textarea id="reason" name="reason" rows="3" required placeholder="What you were told, or what you think triggered it"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="appeal">Why should the action be lifted? <span class="req">*</span></label>
+        <textarea id="appeal" name="appeal" rows="5" required placeholder="Your case, in your own words"></textarea>
+      </div>
+
+      <div class="field">
+        <label for="extra">Anything else we should know? <span class="opt">optional</span></label>
+        <textarea id="extra" name="extra" rows="3" placeholder="Context, witnesses, screenshots you can share elsewhere"></textarea>
+      </div>
+
+      <button type="submit" id="submit-btn" class="btn btn-primary">Submit appeal</button>
+    </form>
+
+    <p class="form-footnote">Submissions are reviewed manually. You'll be notified in Discord with a decision.</p>
+  </div>
+
+  <script>
+    // ⚠️ Replace this with your actual webhook URL
+    const WEBHOOK_URL = "https://canary.discord.com/api/webhooks/1527069516775821507/Mda04bN46k0q5Two7u5ocdugIfQ2hm2AppZllQS8xO08m7A72De9GlwvCr7lRjbODhgw";
+
+    const form = document.getElementById("appeal-form");
+    const statusMsg = document.getElementById("status-msg");
+    const submitBtn = document.getElementById("submit-btn");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const username = document.getElementById("username").value.trim();
+      const userId = document.getElementById("user-id").value.trim();
+      const reason = document.getElementById("reason").value.trim();
+      const appeal = document.getElementById("appeal").value.trim();
+      const extra = document.getElementById("extra").value.trim();
+
+      const payload = {
+        embeds: [{
+          title: "New Appeal Submitted",
+          color: 0x3B82F6,
+          fields: [
+            { name: "Discord Username", value: username || "N/A", inline: true },
+            { name: "User ID", value: userId || "N/A", inline: true },
+            { name: "Ban/Mute Reason (their understanding)", value: reason || "N/A" },
+            { name: "Appeal Reason", value: appeal || "N/A" },
+            { name: "Additional Info", value: extra || "None" }
+          ],
+          timestamp: new Date().toISOString()
+        }]
+      };
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Submitting...";
+      statusMsg.textContent = "";
+      statusMsg.className = "";
+
+      try {
+        const res = await fetch(WEBHOOK_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+
+        if (res.ok) {
+          statusMsg.textContent = "Appeal submitted successfully. You'll be contacted with a decision.";
+          statusMsg.className = "success";
+          form.reset();
+        } else {
+          throw new Error("Webhook responded with status " + res.status);
+        }
+      } catch (err) {
+        statusMsg.textContent = "Something went wrong submitting your appeal. Try again later.";
+        statusMsg.className = "error";
+        console.error(err);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Submit Appeal";
+      }
+    });
+  </script>
+
+  <script src="js/site-shell.js"></script>
+</body>
+</html>
