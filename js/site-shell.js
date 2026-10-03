@@ -5,6 +5,14 @@
   if (!nav || !container || !menu) return;
 
   const navLogo = container.querySelector('.nav-logo');
+  if (!container.querySelector('.nav-search')) {
+    const search = document.createElement('input');
+    search.className = 'nav-search';
+    search.type = 'search';
+    search.placeholder = 'Search RecLora';
+    search.setAttribute('aria-label', 'Search RecLora');
+    container.insertBefore(search, menu);
+  }
   if (navLogo && !navLogo.querySelector('img')) {
     const logo = document.createElement('img');
     logo.src = 'IMG_7056.png';
