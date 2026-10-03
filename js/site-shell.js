@@ -9,7 +9,7 @@
     const search = document.createElement('input');
     search.className = 'nav-search';
     search.type = 'search';
-    search.placeholder = 'Search RecLora';
+    search.placeholder = 'Search...';
     search.setAttribute('aria-label', 'Search RecLora');
     container.insertBefore(search, menu);
   }
@@ -20,6 +20,29 @@
     logo.className = 'logo-img';
     navLogo.prepend(logo);
   }
+  const brandMark = navLogo?.querySelector('img');
+  if (brandMark) {
+    brandMark.src = 'CFA173A2-3EAD-46C4-AFC3-00ACF142A775.png';
+    brandMark.alt = '';
+  }
+
+  const iconByPage = {
+    'index.html': 'Home.png', 'download.html': 'Events.png', 'rooms.html': 'Rooms.png',
+    'news.html': 'Events.png', 'roadmap.html': 'Home.png', 'faq.html': 'Settings.png',
+    'team.html': 'People.png', 'contact.html': 'People.png', 'rules.html': 'Settings.png',
+    'fanart.html': 'Credit.png', 'appeals.html': 'Credit.png', 'shoutouts.html': 'People.png'
+  };
+  menu.querySelectorAll('a.nav-link').forEach((link) => {
+    const page = new URL(link.getAttribute('href'), window.location.href).pathname.split('/').pop() || 'index.html';
+    const icon = iconByPage[page.toLowerCase()];
+    if (!icon || link.querySelector('.nav-icon')) return;
+    const image = document.createElement('img');
+    image.className = 'nav-icon';
+    image.src = `assets/${icon}`;
+    image.alt = '';
+    image.setAttribute('aria-hidden', 'true');
+    link.prepend(image);
+  });
 
   let toggle = container.querySelector('.nav-toggle');
   const legacyToggle = toggle?.dataset.recloraLegacyNav === 'true';
