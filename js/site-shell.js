@@ -22,7 +22,7 @@
   }
   const brandMark = navLogo?.querySelector('img');
   if (brandMark) {
-    brandMark.src = 'CFA173A2-3EAD-46C4-AFC3-00ACF142A775.png';
+    brandMark.src = 'IMG_6471-removebg-preview.png';
     brandMark.alt = '';
   }
 
