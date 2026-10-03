@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Submit an Appeal</title>
 <style>
-/* ---- site stylesheet (as provided) ---- */
 :root {
     --color-black: #141414;
     --color-dark-gray: #1C1C1C;
@@ -108,8 +107,6 @@ body {
         display: none;
     }
 }
-
-/* ---- appeal page, built on top of the above ---- */
 .appeal-container {
     max-width: 640px;
     margin: 0 auto;
@@ -196,13 +193,6 @@ input:focus-visible, textarea:focus-visible, button:focus-visible {
     background-color: var(--color-accent);
 }
 
-.form-footnote {
-    text-align: center;
-    color: #888;
-    font-size: 0.85rem;
-    margin-top: 1.5rem;
-}
-
 @media (prefers-reduced-motion: reduce) {
     * { transition: none !important; }
 }
@@ -248,12 +238,10 @@ input:focus-visible, textarea:focus-visible, button:focus-visible {
       <button type="submit" id="submit-btn" class="btn btn-primary">Submit appeal</button>
     </form>
 
-    <p class="form-footnote">Submissions are reviewed manually. You'll be notified in Discord with a decision.</p>
   </div>
 
   <script>
-    // ⚠️ Replace this with your actual webhook URL
-    const WEBHOOK_URL = "https://canary.discord.com/api/webhooks/1527069516775821507/Mda04bN46k0q5Two7u5ocdugIfQ2hm2AppZllQS8xO08m7A72De9GlwvCr7lRjbODhgw";
+    const WEBHOOK_URL = "";
 
     const form = document.getElementById("appeal-form");
     const statusMsg = document.getElementById("status-msg");
@@ -289,6 +277,9 @@ input:focus-visible, textarea:focus-visible, button:focus-visible {
       statusMsg.className = "";
 
       try {
+        if (!WEBHOOK_URL) {
+          throw new Error("Appeal service is not configured.");
+        }
         const res = await fetch(WEBHOOK_URL, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
