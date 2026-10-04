@@ -1,20 +1,69 @@
-RecLora
-	•	Home
-	•	Download
-	•	Rooms
-	•	News
-	•	Roadmap
-	•	FAQ
-	•	Team
-	•	Contact
-	•	Rules
-	•	Fan Art
-IOS ANDROID META QUEST PLAYSTATION PC STEAM
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download — RecLora</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body.download-view {
+      background-image: linear-gradient(rgba(8, 13, 23, 0.38), rgba(8, 13, 23, 0.38)), url("assets/recroom_replaced.gif");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+  </style>
+</head>
+<body class="download-view">
+  <nav class="navbar"><div class="nav-container">
+    <a href="index.html" class="nav-logo"><img src="IMG_7056.png" alt="RecLora Logo" class="logo-img"><span>RecLora</span></a>
+    <button class="nav-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-menu">
+      <li><a href="index.html" class="nav-link">Home</a></li><li><a href="download.html" class="nav-link active">Download</a></li><li><a href="rooms.html" class="nav-link">Rooms</a></li><li><a href="news.html" class="nav-link">News</a></li><li><a href="roadmap.html" class="nav-link">Roadmap</a></li><li><a href="faq.html" class="nav-link">FAQ</a></li><li><a href="team.html" class="nav-link">Team</a></li><li><a href="contact.html" class="nav-link">Contact</a></li><li><a href="rules.html" class="nav-link">Rules</a></li><li><a href="fanart.html" class="nav-link">Fan Art</a></li>
+    </ul>
+  </div></nav>
 
-RecLora for Windows
-The Windows build is not publicly available yet. Release news and future download details will be shared with the community.
-Coming soon
-FOLLOW RELEASE UPDATES
+  <main class="download-page" aria-label="RecLora platforms and downloads">
+    <div class="download-tabs" role="tablist" aria-label="Choose a platform">
+      <button class="download-tab" id="tab-ios" type="button" role="tab" aria-controls="panel-ios" aria-selected="false" tabindex="-1"><img src="assets/platform-downloads/icons/ios.png" alt=""><span>IOS</span></button>
+      <button class="download-tab" id="tab-android" type="button" role="tab" aria-controls="panel-android" aria-selected="false" tabindex="-1"><img src="assets/platform-downloads/icons/android.png" alt=""><span>ANDROID</span></button>
+      <button class="download-tab" id="tab-meta-quest" type="button" role="tab" aria-controls="panel-meta-quest" aria-selected="false" tabindex="-1"><img src="assets/platform-downloads/icons/meta-quest.png" alt=""><span>META QUEST</span></button>
+      <button class="download-tab" id="tab-playstation" type="button" role="tab" aria-controls="panel-playstation" aria-selected="false" tabindex="-1"><img src="assets/platform-downloads/icons/playstation.png" alt=""><span>PLAYSTATION</span></button>
+      <button class="download-tab active" id="tab-pc" type="button" role="tab" aria-controls="panel-pc" aria-selected="true" tabindex="0"><img src="assets/platform-downloads/graphics/steam.png" alt=""><span>PC</span></button>
+      <button class="download-tab" id="tab-steam" type="button" role="tab" aria-controls="panel-steam" aria-selected="false" tabindex="-1"><img src="assets/platform-downloads/icons/steam.png" alt=""><span>STEAM</span></button>
+    </div>
+    <div class="download-divider" aria-hidden="true"></div>
 
-No public builds are available yet. Release announcements will be posted in Discord.
-© 2026 RecLora. Discord
+    <section class="download-content-panel" id="panel-ios" role="tabpanel" aria-labelledby="tab-ios" tabindex="0" hidden>
+      <div class="download-info"><h1>RecLora for<br>iOS</h1><p>An iOS build is not publicly available yet. Follow the project for development news and release updates.</p><div class="download-status">Coming soon</div><a class="download-button" href="https://discord.gg/bJBuP4hwXz" target="_blank" rel="noopener noreferrer">FOLLOW RELEASE UPDATES</a></div>
+      <div class="download-graphic"><img src="assets/platform-downloads/graphics/ios.png" alt="RecLora platform illustration for iOS" loading="lazy"></div>
+    </section>
+    <section class="download-content-panel" id="panel-android" role="tabpanel" aria-labelledby="tab-android" tabindex="0" hidden>
+      <div class="download-info"><h1>RecLora for<br>Android</h1><p>An Android build is not publicly available yet. Join the community for development news and release updates.</p><div class="download-status">Coming soon</div><a class="download-button" href="https://discord.gg/bJBuP4hwXz" target="_blank" rel="noopener noreferrer">FOLLOW RELEASE UPDATES</a></div>
+      <div class="download-graphic"><img src="assets/platform-downloads/graphics/android.png" alt="RecLora platform illustration for Android" loading="lazy"></div>
+    </section>
+    <section class="download-content-panel" id="panel-meta-quest" role="tabpanel" aria-labelledby="tab-meta-quest" tabindex="0" hidden>
+      <div class="download-info"><h1>RecLora for<br>Meta Quest</h1><p>A VR build is not publicly available yet. Watch the project channels for Meta Quest development and release news.</p><div class="download-status">Coming soon</div><a class="download-button" href="https://discord.gg/bJBuP4hwXz" target="_blank" rel="noopener noreferrer">FOLLOW RELEASE UPDATES</a></div>
+      <div class="download-graphic"><img src="assets/platform-downloads/graphics/meta-quest.png" alt="RecLora platform illustration for Meta Quest" loading="lazy"></div>
+    </section>
+    <section class="download-content-panel" id="panel-playstation" role="tabpanel" aria-labelledby="tab-playstation" tabindex="0" hidden>
+      <div class="download-info"><h1>RecLora for<br>PlayStation</h1><p>Console availability is a later possibility, and no PlayStation download is available. Follow official updates for any plans.</p><div class="download-status">Possible later</div><a class="download-button" href="https://discord.gg/bJBuP4hwXz" target="_blank" rel="noopener noreferrer">FOLLOW RELEASE UPDATES</a></div>
+      <div class="download-graphic"><img src="assets/platform-downloads/graphics/playstation.png" alt="RecLora platform illustration for PlayStation" loading="lazy"></div>
+    </section>
+    <section class="download-content-panel active" id="panel-pc" role="tabpanel" aria-labelledby="tab-pc" tabindex="0">
+      <div class="download-info"><h1>RecLora for<br>Windows</h1><p>The Windows build is not publicly available yet. Release news and future download details will be shared with the community.</p><div class="download-status">Coming soon</div><a class="download-button" href="https://discord.gg/bJBuP4hwXz" target="_blank" rel="noopener noreferrer">FOLLOW RELEASE UPDATES</a></div>
+      <div class="download-graphic"><img src="assets/platform-downloads/graphics/pc.png" alt="RecLora platform illustration for Windows PC"></div>
+    </section>
+    <section class="download-content-panel" id="panel-steam" role="tabpanel" aria-labelledby="tab-steam" tabindex="0" hidden>
+      <div class="download-info"><h1>RecLora for<br>Steam</h1><p>Steam availability has not been announced. Follow the project for verified release details as development progresses.</p><div class="download-status">Not announced</div><a class="download-button" href="https://discord.gg/bJBuP4hwXz" target="_blank" rel="noopener noreferrer">FOLLOW RELEASE UPDATES</a></div>
+      <div class="download-graphic"><img src="assets/platform-downloads/graphics/steam.png" alt="RecLora platform illustration for Steam" loading="lazy"></div>
+    </section>
+    <p class="download-note">No public builds are available yet. Release announcements will be posted in Discord.</p>
+  </main>
+
+  <footer class="footer"><p>&copy; 2026 RecLora. <a href="https://discord.gg/bJBuP4hwXz" target="_blank" rel="noreferrer">Discord</a></p></footer>
+  <script src="js/download-page.js"></script>
+  <script src="js/site-shell.js"></script>
+</body>
+</html>
