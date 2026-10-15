@@ -32,5 +32,21 @@
   </main>
   <footer class="footer"><p>&copy; 2026 RecLora. All rights reserved. <a href="https://discord.gg/bJBuP4hwXz" target="_blank" rel="noopener noreferrer">Discord</a></p></footer>
   <script src="js/site-shell.js"></script>
+
+<audio id="backgroundMusic" autoplay loop>
+    <source src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    const music = document.getElementById("backgroundMusic");
+    music.volume = 0.5;
+
+    music.play().catch(() => {
+        document.addEventListener("click", () => {
+            music.play();
+        }, { once: true });
+    });
+</script>
+
 </body>
 </html>
